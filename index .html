@@ -106,6 +106,33 @@ footer {
 .container:hover .hover-div {
     display: block;
 }
+.hover-container {
+    position: relative;
+    display: inline-block;
+    padding: 10px;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.animated-div {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-left: 10px;
+    padding: 10px;
+    background-color: lightcoral;
+    width: 150px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transform: translateX(-20px);
+}
+
+.hover-container:hover .animated-div {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
 </style>
 <body>
  <header>
